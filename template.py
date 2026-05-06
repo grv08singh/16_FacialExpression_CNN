@@ -7,6 +7,7 @@ logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 project_name = "facial-expression-recognition"
 
 list_of_files = [
+    "app.py",
     ".github/workflows/.gitkeep",
     "artifacts/.gitkeep",
     "logs/.gitkeep",
@@ -14,6 +15,7 @@ list_of_files = [
     "notebooks/01_test.ipynb",
     "src/components/__init__.py",
     "src/components/data_ingestion.py",
+    "src/components/model_evaluation_mlflow.py",
     "src/components/model_training.py",
     "src/components/prepare_base_model.py",
     "src/config/__init__.py",

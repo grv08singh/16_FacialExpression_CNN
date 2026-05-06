@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/05%20GIT/16_FacialExpression_CNN/mlruns/0/92e1d341effd42a7b45bb2e6bb350447/artifacts
+end_time: 1778089959357
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 92e1d341effd42a7b45bb2e6bb350447
+run_name: casual-cow-333
+run_uuid: 92e1d341effd42a7b45bb2e6bb350447
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1778089936548
+status: 4
+tags: []
+user_id: Dex
