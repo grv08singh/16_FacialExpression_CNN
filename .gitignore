@@ -219,4 +219,5 @@ __marimo__/
 .streamlit/secrets.toml
 
 #data file zip
-notebooks\data\data.zip
+notebooks/data/data.zip
+artifacts/
