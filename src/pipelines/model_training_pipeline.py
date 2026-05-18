@@ -4,6 +4,7 @@ from src.components.model_training import Training
 import warnings as wr
 wr.filterwarnings("ignore", category=FutureWarning)
 
+STAGE_NAME = "Model Training"
 class ModelTrainingPipeline:
     def __init__(self):
         pass
@@ -17,3 +18,13 @@ class ModelTrainingPipeline:
         training.train_valid_generator()
         training.train()
         logging.info("Model Training Pipeline completed")
+    
+if __name__ == '__main__':
+    try:
+        logging.info(f"{STAGE_NAME} started:")
+        pipeline = ModelTrainingPipeline()
+        pipeline.main()
+        logging.info(f"{STAGE_NAME} completed\n\n")
+    except Exception as e:
+        logging.exception(e)
+        raise e

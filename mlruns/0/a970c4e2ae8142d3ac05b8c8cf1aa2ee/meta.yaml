@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/05%20GIT/16_FacialExpression_CNN/mlruns/0/a970c4e2ae8142d3ac05b8c8cf1aa2ee/artifacts
+end_time: 1779103161224
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a970c4e2ae8142d3ac05b8c8cf1aa2ee
+run_name: bittersweet-calf-13
+run_uuid: a970c4e2ae8142d3ac05b8c8cf1aa2ee
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1779103139709
+status: 3
+tags: []
+user_id: Dex

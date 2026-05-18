@@ -2,6 +2,7 @@ from src.config.configuration import ConfigurationManager
 from src.components.model_evaluation_mlflow import Evaluation
 from src.logger import logging
 
+STAGE_NAME = 'Model Evaluation'
 class ModelEvaluationPipeline:
     def __init__(self):
         pass
@@ -16,7 +17,12 @@ class ModelEvaluationPipeline:
         evaluation.log_into_mlflow()
         logging.info("Exited Method main of class ModelEvaluationPipeline")
 
-
 if __name__ == '__main__':
-    pipeline = ModelEvaluationPipeline()
-    pipeline.main()
+    try:
+        logging.info(f"{STAGE_NAME} started:")
+        pipeline = ModelEvaluationPipeline()
+        pipeline.main()
+        logging.info(f"{STAGE_NAME} completed\n\n")
+    except Exception as e:
+        logging.exception(e)
+        raise e

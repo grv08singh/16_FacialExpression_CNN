@@ -1,6 +1,6 @@
 tensorflow-gpu==2.10.1
 pandas==2.0.3
-dvc==3.0.0
+dvc
 mlflow==2.2.2
 notebook==6.5.4
 numpy==1.23.5

@@ -1,8 +1,49 @@
 stages:
   data_ingestion:
-    cmd: python src/pipelines/data_ingestion.py
+    cmd: python src\pipelines\data_ingestion_pipeline.py
     deps:
-      - src/pipelines/data_ingestion.py
-      - config/config.yaml
+      - src\pipelines\data_ingestion_pipeline.py
+      - config.yaml
     outs:
-      artifacts/data_ingestion/facial_expression_images
+      - artifacts\data_ingestion\data
+  prepare_base_model:
+    cmd: python src\pipelines\prepare_base_model_pipeline.py
+    deps:
+      - src\pipelines\prepare_base_model_pipeline.py
+      - config.yaml
+    params:
+      - IMAGE_SIZE
+      - INCLUDE_TOP
+      - WEIGHTS
+      - CLASSES
+      - LEARNING_RATE
+    outs:
+      - artifacts\models\base_model.h5
+      - artifacts\models\updated_base_model.h5
+  model_training:
+    cmd: python src\pipelines\model_training_pipeline.py
+    deps:
+      - src\pipelines\model_training_pipeline.py
+      - config.yaml
+      - artifacts\data_ingestion\data
+      - artifacts\models\updated_base_model.h5
+    params:
+      - IMAGE_SIZE
+      - EPOCHS
+      - BATCH_SIZE
+      - AUGMENTATION
+    outs:
+      - artifacts\models\trained_model.h5
+  model_evaluation:
+    cmd: python src\pipelines\model_evaluation_pipeline.py
+    deps:
+      - src\pipelines\model_evaluation_pipeline.py
+      - config.yaml
+      - artifacts\data_ingestion\data
+      - artifacts\models\trained_model.h5
+    params:
+      - IMAGE_SIZE
+      - BATCH_SIZE
+    metrics:
+    - scores.json:
+        cache: false
