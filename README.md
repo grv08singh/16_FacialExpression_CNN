@@ -44,24 +44,25 @@ pip install -r requirements.txt
 mlflow ui
 ```
 ### dagshub
-MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/Kidney-Disease-Classification-MLflow-DVC.mlflow \
-MLFLOW_TRACKING_USERNAME=entbappy \
+MLFLOW_TRACKING_URI=https://dagshub.com/grv08singh/16_FacialExpression_CNN.mlflow \
+MLFLOW_TRACKING_USERNAME=grv08singh \
 MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0 \
 python script.py
 
 Run this to export as env variables:
 ```bash
-export MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/Kidney-Disease-Classification-MLflow-DVC.mlflow
+export MLFLOW_TRACKING_URI=https://dagshub.com/grv08singh/16_FacialExpression_CNN.mlflow
 export MLFLOW_TRACKING_USERNAME=entbappy 
 export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0
 ```
 
 
 ### DVC cmd
-1. dvc init
-2. dvc repro
-3. dvc dag
-
+``` git bash
+dvc init
+dvc repro
+dvc dag
+```
 
 ## About MLflow & DVC
 #### MLflow

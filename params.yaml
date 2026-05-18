@@ -2,9 +2,9 @@ AUGMENTATION: True
 IMAGE_SIZE: [100, 100, 3]
 BATCH_SIZE: 64
 INCLUDE_TOP: False
-EPOCHS: 50
+EPOCHS: 30
 CLASSES: 7
 WEIGHTS: "imagenet"
 LEARNING_RATE: 1.0e-2
-OPTIMIZER: "SGD"     # adam | sgd | RMSprop
+OPTIMIZER: "RMSprop"     # adam | sgd | RMSprop
 LOSS: "categorical_crossentropy"
