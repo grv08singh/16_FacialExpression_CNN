@@ -35,6 +35,15 @@ pip uninstall -y numpy
 pip install numpy==1.23.5
 conda install -c conda-forge greenlet -y
 pip install -r requirements.txt
+```
+
+
+### DVC cmd
+``` git bash
+dvc init
+dvc repro
+dvc dag
+```
 ``` 
 
 
@@ -52,17 +61,8 @@ python script.py
 Run this to export as env variables:
 ```bash
 export MLFLOW_TRACKING_URI=https://dagshub.com/grv08singh/16_FacialExpression_CNN.mlflow
-export MLFLOW_TRACKING_USERNAME=entbappy 
+export MLFLOW_TRACKING_USERNAME=grv08singh 
 export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0
-```
-
-
-### DVC cmd
-``` git bash
-dvc init
-dvc repro
-dvc dag
-```
 
 ## About MLflow & DVC
 #### MLflow

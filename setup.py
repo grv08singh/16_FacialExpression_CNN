@@ -19,8 +19,8 @@ def get_requirements(file_path: str) -> List[str]:
         print(f"Error reading the file {file_path}: {e}")
         return []
 
-SRC_REPO = "FacialExpression_Classifier_CNN"
-VERSION = "0.3"
+SRC_REPO = "16_FacialExpression_CNN"
+VERSION = "0.4"
 AUTHOR = "Grv"
 AUTHOR_EMAIL = "grv08singh@gmail.com"
 AUTHOR_USER_NAME = "grv08singh"
